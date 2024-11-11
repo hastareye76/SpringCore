@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-
 public class OrderServiceImpl implements OrderService {
 
     //주어진 id로 멤버를 찾아야 한다. 이역시 객체에 의존적이므로 주석처리
@@ -23,7 +22,6 @@ public class OrderServiceImpl implements OrderService {
     //private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     //DIP 해결을 위해서 인퍼페이스에만 의존하지 않도록 아래와 같이 선언해 준다.
     //하지만 실제 사용할 객체가 설정되지 못하는 문제가 생긴다.
-
     private final MemberRepository memberRepository; //lombok 라이브러리 적용테스트를 위해서 final 키워드를 필드 멤버에 추가해주었다.
     private final DiscountPolicy discountPolicy;
 
